@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import logoImage from "./../assets/logo.png";
+import styles from "./MainHeader.module.css";
+
 export default function MainHeader() {
   return (
-    <header>
-      <Link href="/">
+    <header className={styles.header}>
+      <Link href="/" className={styles.logo}>
         <Image
           src={logoImage.src}
           width={100}
@@ -14,7 +15,7 @@ export default function MainHeader() {
         />
         Next Level Food
       </Link>
-      <nav>
+      <nav className={styles.nav}>
         <ul>
           <li>
             <Link href="/meals">Browse Meals</Link>
@@ -24,8 +25,6 @@ export default function MainHeader() {
           </li>
         </ul>
       </nav>
-      <h1>Welcome to this NextJS Course!</h1>
-      <p>🔥 Let&apos;s get started! 🔥</p>
     </header>
   );
 }
