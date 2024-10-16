@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import Link from "next/link";
 
 export default function Home() {
@@ -7,6 +6,18 @@ export default function Home() {
       <h1 style={{ color: "white", textAlign: "center" }}>
         Time to get started!
       </h1>
+      <p>
+        <Link href="/meals">Meals</Link>
+      </p>
+      <p>
+        <Link href="/meals/soup">Meal Soup</Link>
+      </p>
+      <p>
+        <Link href="/meals/share">Share Meals</Link>
+      </p>
+      <p>
+        <Link href="community">Community</Link>
+      </p>
     </main>
   );
 }
