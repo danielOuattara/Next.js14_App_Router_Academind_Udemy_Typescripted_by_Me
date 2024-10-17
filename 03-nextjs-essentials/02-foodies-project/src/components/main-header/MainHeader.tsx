@@ -3,6 +3,7 @@ import Link from "next/link";
 import logoImage from "./../../assets/logo.png";
 import styles from "./MainHeader.module.css";
 import MainHeaderBackground from "./MainHeaderBackground";
+import MainNavigation from "./MainNavigation";
 
 export default function MainHeader() {
   return (
@@ -13,16 +14,7 @@ export default function MainHeader() {
           <Image src={logoImage} alt="A plate with food in it." priority />
           Next Level Food
         </Link>
-        <nav className={styles.nav}>
-          <ul>
-            <li>
-              <Link href="/meals">Browse Meals</Link>
-            </li>
-            <li>
-              <Link href="/community">Foodies Community</Link>
-            </li>
-          </ul>
-        </nav>
+        <MainNavigation />
       </header>
     </>
   );
