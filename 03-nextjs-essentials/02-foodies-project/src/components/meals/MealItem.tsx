@@ -1,4 +1,4 @@
-import styles from "./MealsGrid.module.css";
+import styles from "./MealItem.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { TypeMeal } from "./MealsGrid";
