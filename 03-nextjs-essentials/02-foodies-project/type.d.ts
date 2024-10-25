@@ -2,6 +2,7 @@ type TypeMeal = {
   id: string;
   title: string;
   slug: string;
+  imageFile: File;
   image: string;
   summary: string;
   creator: string;
