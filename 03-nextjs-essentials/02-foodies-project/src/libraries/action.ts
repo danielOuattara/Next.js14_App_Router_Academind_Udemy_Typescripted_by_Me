@@ -1,4 +1,5 @@
 "use server"; // creates a server action
+import { revalidatePath } from "next/cache";
 import { saveMeal } from "./meal";
 import { redirect } from "next/navigation";
 
@@ -15,5 +16,6 @@ export async function shareMeal(formData: FormData) {
   //   console.log(meal);
 
   await saveMeal(meal);
+  revalidatePath("/meals");
   redirect("/meals");
 }
