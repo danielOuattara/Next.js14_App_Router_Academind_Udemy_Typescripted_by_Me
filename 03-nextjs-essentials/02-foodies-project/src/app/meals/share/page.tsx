@@ -1,9 +1,13 @@
+"use client";
+
 import ImagePicker from "@/components/meals/ImagePicker";
 import styles from "./page.module.css";
 import { shareMeal } from "@/libraries/action";
 import MealShareFormButton from "@/components/meals/MealShareFormButton";
+import { useFormState } from "react-dom";
 
 export default function ShareMealPage() {
+  const [state, formAction] = useFormState(shareMeal, { message: "" });
   return (
     <>
       <header className={styles.header}>
@@ -14,7 +18,7 @@ export default function ShareMealPage() {
       </header>
       <main className={styles.main}>
         {/* Error on action: type correction in next videos */}
-        <form className={styles.form} action={shareMeal}>
+        <form className={styles.form} action={formAction}>
           <div className={styles.row}>
             <p>
               <label htmlFor="name">Your name</label>
@@ -43,6 +47,7 @@ export default function ShareMealPage() {
             ></textarea>
           </p>
           <ImagePicker name="image" label="Select image" />
+          {state.message && <p>{state.message}</p>}
           <p className={styles.actions}>
             <MealShareFormButton />
           </p>

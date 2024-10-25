@@ -10,7 +10,10 @@ function isInvalidText(text: string) {
   return false;
 }
 
-export async function shareMeal(formData: FormData) {
+export async function shareMeal(
+  _prevMessage: { message: string },
+  formData: FormData,
+) {
   const meal = {
     title: formData.get("title"),
     summary: formData.get("summary"),
