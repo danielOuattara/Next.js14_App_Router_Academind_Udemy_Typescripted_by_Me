@@ -13,6 +13,7 @@ export default function ShareMealPage() {
         <p>Or any other meal you feel needs sharing!</p>
       </header>
       <main className={styles.main}>
+        {/* Error on action: type correction in next videos */}
         <form className={styles.form} action={shareMeal}>
           <div className={styles.row}>
             <p>
